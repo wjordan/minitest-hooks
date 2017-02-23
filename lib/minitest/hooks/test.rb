@@ -63,6 +63,7 @@ module Minitest::Hooks::ClassMethods
   # dup of the singleton instance.
   def with_info_handler(reporter, &block)
     @instance = new(NEW)
+    @instance.name = 'INSTANCE'
     inside = false
    
     begin
